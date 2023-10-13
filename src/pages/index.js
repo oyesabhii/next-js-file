@@ -1,118 +1,611 @@
+import React, { useState } from "react";
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
+
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  const [isShown, setIsShown] = useState(false);
+
+  const handleClick = event => {
+    
+    setIsShown(current = !current)
+  
+  }
+
+
   return (
     <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
+      className={`h-screen bg-slate-800 h-screen p-30 ${inter.className}`}
+      
     >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+     <div className = "h-screen text-white parent"> 
+      <div className="mb-12 grid text-center text-Neutral-100 bg-slate-950 lg:max-w-30xl lg:w-full lg:mb-0 lg:grid-cols-6 lg:text-left">
+      <Link
+          href="/copy"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-blue-700 hover:bg-blue-700 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"          // target="_blank"
+          // rel="noopener noreferrer"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold text-center`}>
+          
+            PKSP{' '}
+            {/* <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span> */}
+          </h2>
+          {/* <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+            Security and housekeeping solutins.
+          </p> */}
+        </Link>
+     
+     
+     
+     
+      <Link
+          href="/hello"
+  
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-blue-700 hover:bg-blue-700 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          // target="_blank"
+          // rel="noopener noreferrer"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold text-center`}>
+            ABOUT US{' '}
+            {/* <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span> */}
+          </h2>
+          {/* <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+            KNOW MORE ABOUT US &nbsp;
+          </p> */}
+        </Link>
+
+        <Link
+          href="/solution"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-blue-700 hover:bg-blue-700 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"          // target="_blank"
+          // rel="noopener noreferrer"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold text-center`}>
+          
+            SOLUTIONS{' '}
+            {/* <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span> */}
+          </h2>
+          {/* <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+            Security and housekeeping solutins.
+          </p> */}
+        </Link>
+
+        <Link
+          href="/career"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-blue-700 hover:bg-blue-700 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          // target="_blank"
+          // rel="noopener noreferrer"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold text-center`}>
+            {'CAREER'}
+            {/* <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span> */}
+          </h2>
+          {/* <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+             we welocme you in Pk service provider &nbsp;.
+          </p> */}
+        </Link>
+
+        <Link
+          href="https://www.youtube.com/@comicalinfo"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-blue-700 hover:bg-blue-700 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold text-center`}>
+             {'SOCIAL'}
+            {/* <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span> */}
+          </h2>
+          {/* <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+             By clicking this you will go on our you tube chanel .
+          </p> */}
+        </Link>
+
+
+      <Link
+          href="/contact"
+         className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-blue-700 hover:bg-blue-700 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          // target="_blank"
+          // rel="noopener noreferrer"
+        >
+          <h2 className={`mb-1 text-2xl font-semibold text-center`}>
+            CONTACT US{' '}
+            {/* <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span> */}
+          </h2>
+          {/* <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+             Call us &nbsp;
+          </p> */}
+         </Link> 
+         </div> 
+      {/* <div className="z-18 font-mono flex content">
+        {/* <div> */}
+          
+        {/* <h1 className = "text-xl font= bold  ">
+          
+                PK SERVICE PROVIDERS {' '} */}
+          <br/>
+          <br/> 
+          {/* <code className="font-size: large font-weight:900"></code> */}
+        {/* </h1> */}
+        {/* </div> */}
+        {/* <div className="h-92 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
+          <Link
+            className="pointer-events-none flex place-items-center gap-2 p-18 lg:pointer-events-auto lg:p-0"
+            href="/hello"
+            // target="_blank"
+            // rel="noopener noreferrer"
           >
-            By{' '}
+            
+            PKSP{' '}
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
+              src="/assets/abhi.jpg"
+              alt="abhi"
               className="dark:invert"
-              width={100}
-              height={24}
+              width={5}
+              height={4}
               priority
             />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
+          </Link>
+        </div> */}
+      {/* </div> */}
+        
+        
+      <div className = "flex place-items-center after:absolute z-10 md:h-[540px] h-[320px] w-full after:translate-x-1/2 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-['']  after:dark:from-sky-900 after:dark:via-[#0141ff]/40 ">
+       {/* <header className = "flex items-center justify-center mb-12"> */}
+        <video
+        autoPlay={true}
+        loop
+        muted
+        playsInline={true}
+        className="absoluete z-10 w-auto min-w-full min-h-full max-w-full max-h-full h-full"
+        >
+          <source src="/assets/PKSP.mp4" type="video/mp4" />
+           does not support
+        </video> 
+        {/* </header> */}
+        {/* <Image
           className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
+          src="/assets/han.jpg"
           alt="Next.js Logo"
-          width={180}
-          height={37}
+          width={230}
+          height={270}
           priority
-        />
+          /> */}
       </div>
+      <br/>
+      <br/>   
 
+
+
+
+
+
+
+
+
+
+
+      <div className="mb-12 grid text-Neutral-100 bg-red-600 lg:max-w-10xl lg:w-full lg:mb-0 lg:cols-6 lg:text-center">
+      <Link
+          href="/copy"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-blue-700 hover:bg-blue-700 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"          // target="_blank"
+          // rel="noopener noreferrer"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold`}>
+          
+            PKSP{' '}
+            {/* <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span> */}
+          </h2>
+          {/* <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+            Security and housekeeping solutins.
+          </p> */}
+        </Link>
+     
+     
+     
+     
+      <Link
+          href="/hello"
+  
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-blue-700 hover:bg-blue-700 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          // target="_blank"
+          // rel="noopener noreferrer"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold`}>
+            ABOUT US{' '}
+            {/* <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span> */}
+          </h2>
+          {/* <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+            KNOW MORE ABOUT US &nbsp;
+          </p> */}
+        </Link>
+
+        <Link
+          href="/solution"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-blue-700 hover:bg-blue-700 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"          // target="_blank"
+          // rel="noopener noreferrer"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold`}>
+          
+            SOLUTIONS{' '}
+            {/* <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span> */}
+          </h2>
+          {/* <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+            Security and housekeeping solutins.
+          </p> */}
+        </Link>
+
+        <Link
+          href="/career"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-blue-700 hover:bg-blue-700 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          // target="_blank"
+          // rel="noopener noreferrer"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold`}>
+            {'CAREER'}
+            {/* <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span> */}
+          </h2>
+          {/* <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+             we welocme you in Pk service provider &nbsp;.
+          </p> */}
+        </Link>
+
+        <Link
+          href="https://www.youtube.com/@comicalinfo"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-blue-700 hover:bg-blue-700 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold`}>
+             {'SOCIAL'}
+            {/* <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span> */}
+          </h2>
+          {/* <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+             By clicking this you will go on our you tube chanel .
+          </p> */}
+        </Link>
+
+
+      <Link
+          href="/contact"
+         className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-blue-700 hover:bg-blue-700 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          // target="_blank"
+          // rel="noopener noreferrer"
+        >
+          <h2 className={`mb-1 text-2xl font-semibold`}>
+            CONTACT US{' '}
+            {/* <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span> */}
+          </h2>
+          {/* <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+             Call us &nbsp;
+          </p> */}
+         </Link> 
+         </div> 
+      {/* <div className="z-18 font-mono flex content">
+        {/* <div> */}
+          
+        {/* <h1 className = "text-xl font-bold text-slate-800">
+           <br/>
+                PK SERVICE PROVIDERS {' '}
+          <br/>
+          <br/> */}
+          
+          {/* <code className="font-size: large font-weight:900"></code> */}
+        {/* </h1> */}
+        {/* </div> */}
+        {/* <div className="h-92 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
+          <Link
+            className="pointer-events-none flex place-items-center gap-2 p-18 lg:pointer-events-auto lg:p-0"
+            href="/hello"
+            // target="_blank"
+            // rel="noopener noreferrer"
+          >
+            
+            PKSP{' '}
+            <Image
+              src="/assets/abhi.jpg"
+              alt="abhi"
+              className="dark:invert"
+              width={5}
+              height={4}
+              priority
+            />
+          </Link>
+        </div> */}
+      {/* </div> */}
+      
+
+
+
+
+
+
+
+
+
+      
+      
+      <div className = "min-h-screen text-white parent bg-cyan-400"> 
+      {/* className={`h-screen bg-slate-800 h-screen h-30`} */}
+      <div className="mb-12 h-46 grid text-center text-rose-950 bg-blue-650 lg:max-w-30xl lg:w-full lg:mb-0 lg:grid-cols-6 lg:text-left">
+      <div class="relative inline-block text-left">
+  <div>
+
+    
+    <button onClick={() => setIsShown(!isShown)} type="button" class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" id="menu-button" aria-expanded="true" aria-haspopup="true">
+    
+    <h2 className={`mb-3 text-2xl font-semibold`} >
+          
+          PKSP{' '}
+          </h2>     
+      <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+      </svg>
+    </button>
+  </div>
+
+  {
+    isShown ? (<div class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+    <div class="py-1" role="none">
+     
+      <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
+      <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
+      <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
+      <form method="POST" action="#" role="none">
+        <button type="submit" class="text-gray-700 block w-full px-4 py-2 text-left text-sm" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
+      </form>
+    </div>
+  </div>) : (<span />)
+  }
+</div>
+
+
+      {/* <Link
+          href="/copy"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-blue-700 hover:bg-blue-700 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"          // target="_blank" */}
+           {/* rel="noopener noreferrer" */}
+        {/* > */}
+          
+          {/* <h2 className={`mb-3 text-2xl font-semibold`}>
+          
+            PKSP{' '} */}
+
+            
+            {/* <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span> */}
+          {/* </h2> */}
+          {/* <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+            Security and housekeeping solutins.
+          </p> */}
+        {/* </Link> */}
+     
+     
+     
+     
+      <Link
+          href="/hello"
+  
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-blue-700 hover:bg-blue-700 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          // target="_blank"
+          // rel="noopener noreferrer"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold`}>
+            ABOUT US{' '}
+            {/* <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span> */}
+          </h2>
+          {/* <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+            KNOW MORE ABOUT US &nbsp;
+          </p> */}
+        </Link>
+
+        <Link
+          href="/solution"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-blue-700 hover:bg-blue-700 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"          // target="_blank"
+          // rel="noopener noreferrer"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold`}>
+          
+            SOLUTIONS{' '}
+            {/* <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span> */}
+          </h2>
+          {/* <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+            Security and housekeeping solutins.
+          </p> */}
+        </Link>
+
+        <Link
+          href="/career"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-blue-700 hover:bg-blue-700 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          // target="_blank"
+          // rel="noopener noreferrer"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold`}>
+            {'CAREER'}
+            {/* <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span> */}
+          </h2>
+          {/* <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+             we welocme you in Pk service provider &nbsp;.
+          </p> */}
+        </Link>
+
+        <Link
+          href="https://www.youtube.com/@comicalinfo"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-blue-700 hover:bg-blue-700 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold`}>
+             {'SOCIAL'}
+            {/* <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span> */}
+          </h2>
+          {/* <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+             By clicking this you will go on our you tube chanel .
+          </p> */}
+        </Link>
+
+
+      <Link
+          href="/contact"
+         className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-blue-700 hover:bg-blue-700 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          // target="_blank"
+          // rel="noopener noreferrer"
+        >
+          <h2 className={`mb-1 text-2xl font-semibold`}>
+            CONTACT US{' '}
+            {/* <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span> */}
+          </h2>
+          {/* <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+             Call us &nbsp;
+          </p> */}
+         </Link> 
+         </div> 
+         </div>
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* 
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href="/solution"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"          // target="_blank"
+          // rel="noopener noreferrer"
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
+          <h2 className={`mb-3 text-2xl font-semibold text-purple-600`}>
+          
+            SOLUTIONS{' '}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+            Security and housekeeping solutins.
           </p>
-        </a>
+        </Link> */}
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
+        {/* <Link
+          href="/hello"
+  
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+          // target="_blank"
+          // rel="noopener noreferrer"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
+            HOME{' '}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
+            KNOW MORE ABOUT US &nbsp;
           </p>
-        </a>
+        </Link> */}
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
+        {/* <Link
+          href="/career"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+          // target="_blank"
+          // rel="noopener noreferrer"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
+            {'CAREER'}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
+             we welocme you in Pk service provider &nbsp;.
           </p>
-        </a>
+        </Link> */}
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
+        {/* <Link
+          href="https://www.youtube.com/@comicalinfo"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
           target="_blank"
           rel="noopener noreferrer"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
+             {'SOCIAL'}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+             By clicking this you will go on our you tube chanel .
           </p>
-        </a>
-      </div>
+        </Link> */}
+
+        {/* <Link
+          href="/contact"
+         className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          // target="_blank"
+          // rel="noopener noreferrer"
+        >
+          <h2 className={`mb-4 text-2xl font-semibold`}>
+            CONTACT US{' '}
+            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span>
+          </h2>
+          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+             Call us &nbsp;
+          </p>
+         </Link> 
+      </div> */}
+     </div> 
     </main>
   )
 }
