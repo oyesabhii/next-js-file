@@ -9,10 +9,15 @@ import Link from 'next/link';
 
 
 export default function hello() {
-    return ( 
+
+
+
+    return (
+
         <main
         className={`flex flex-col min-h-screen bg-slate-800 flex-col items-center justify-between p-24 ${inter.className}`}
       >
+        
         <div className="mb-12 grid text-center text-Neutral-100 bg-red-600 lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-6 lg:text-left">
         <Link
           href="/copy"
